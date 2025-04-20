@@ -83,8 +83,8 @@ function createStore(): CheckoutStore {
                 
                 // Get IP
                 if(local.ip === null) {
-                    const { ip }: {ip: string} = await (await fetch(`https://api.ipify.org?format=json`)).json()
-    
+                    // const { ip }: {ip: string} = await (await fetch(`https://api.ipify.org?format=json`)).json()
+                    const ip = "127.0.0.1";
                     localStorage.setItem('ip', ip)
                     local.ip = ip
                 }
